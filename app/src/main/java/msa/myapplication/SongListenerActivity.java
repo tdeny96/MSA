@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class SongListenerActivity extends AppCompatActivity implements View.OnClickListener {
-    Button play,pause,stop,next,library;
+    Button play,pause,stop,next;
     MediaPlayer mp;
     int pauseCurrentPosition;
 
@@ -21,18 +21,11 @@ public class SongListenerActivity extends AppCompatActivity implements View.OnCl
         pause = (Button)findViewById(R.id.PauseButton);
         stop = (Button)findViewById(R.id.StopButton);
         next = (Button)findViewById(R.id.NextButton);
-        library=(Button)findViewById(R.id.BackToSongsButton);
 
         play.setOnClickListener(this);
         pause.setOnClickListener(this);
         stop.setOnClickListener(this);
         next.setOnClickListener(this);
-        library.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GoToSongs();
-            }
-        });
     }
 
     public void onClick(View view){

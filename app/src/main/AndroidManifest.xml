@@ -19,7 +19,11 @@
         <activity android:name=".MusicLibraryActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".BookLibraryActivity" />
-        <activity android:name=".SongListenerActivity"></activity>
+        <activity android:name=".SongListenerActivity" />
+        <activity android:name=".FanArtLibraryActivity" />
+        <activity android:name=".BookReaderActivity" />
+        <activity android:name=".AboutBookActivity" />
+        <activity android:name=".ReaderActivity"></activity>
     </application>
 
 </manifest>

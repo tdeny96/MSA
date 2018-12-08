@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class UserProfileActivity extends AppCompatActivity {
     private Button MusicButton;
     private Button LibraryButton;
+    private Button FanArtButton;
     private TextView username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
         MusicButton = (Button)findViewById(R.id.MusicLibraryButton);
         LibraryButton = (Button)findViewById(R.id.BookLibraryButton);
+        FanArtButton = (Button) findViewById(R.id.FanArtPageButton);
         username = (TextView)findViewById(R.id.userName);
         MusicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +33,12 @@ public class UserProfileActivity extends AppCompatActivity {
                 GoToBooks();
             }
         });
+        FanArtButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotofanart();
+            }
+        });
     }
 
     private void gotonext(){
@@ -41,5 +49,10 @@ public class UserProfileActivity extends AppCompatActivity {
     private void GoToBooks(){
         Intent intent3 = new Intent(UserProfileActivity.this,BookLibraryActivity.class);
         startActivity(intent3);
+    }
+
+    private void gotofanart(){
+        Intent intent4 = new Intent(UserProfileActivity.this,FanArtLibraryActivity.class);
+        startActivity(intent4);
     }
 }
